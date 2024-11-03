@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+        #chatbox { width: 300px; height: 400px; border: 1px solid #ccc; padding: 10px; overflow-y: auto; }
+        #userInput { width: 80%; }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Chatbot</h2>
+        <div id="chatbox"></div>
+        <input type="text" id="userInput" placeholder="Escribe tu respuesta aquí">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+    
+    <script>
+        let currentEntryIndex = 0;
+        let currentPropIndex = 0;
+        let entries = [];
+
+        async function loadEntries() {
+            const chatbox = document.getElementById("chatbox");
+            try {
+                const response = await fetch("/entries");
+                const data = await response.json();
+
+                if (data.entries) {
+                    entries = data.entries;  // Almacenar todas las entradas
+                    askNextQuestion();  // Preguntar la primera entrada
+                } else {
+                    chatbox.innerHTML += `<p><strong>Error:</strong> Datos no encontrados.</p>`;
+                }
+            } catch (error) {
+                chatbox.innerHTML += `<p><strong>Error:</strong> No se pudieron cargar los datos.</p>`;
+            }
+        }
+
+        function askNextQuestion() {
+            const chatbox = document.getElementById("chatbox");
+            if (currentEntryIndex < entries.length) {
+                const entry = entries[currentEntryIndex];
+                if (currentPropIndex < entry.props.length) {
+                    chatbox.innerHTML += `<p><strong>${entry.name}:</strong> ${entry.description}</p>`;
+                    chatbox.innerHTML += `<p>${entry.props[currentPropIndex]}</p>`;
+                } else {
+                    currentEntryIndex++;
+                    currentPropIndex = 0;
+                    askNextQuestion();  // Avanza a la siguiente entrada
+                }
+            } else {
+                chatbox.innerHTML += `<p><strong>Fin de las preguntas.</strong></p>`;
+            }
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById("userInput").value;
+            const chatbox = document.getElementById("chatbox");
+            if (currentEntryIndex < entries.length) {
+                const entry = entries[currentEntryIndex];
+                if (currentPropIndex < entry.props.length) {
+                    chatbox.innerHTML += `<p><strong>Tu respuesta:</strong> ${userInput}</p>`;
+                    currentPropIndex++;
+                    document.getElementById("userInput").value = "";  // Limpiar el campo de entrada
+                    askNextQuestion();  // Pregunta la siguiente propiedad
+                }
+            }
+        }
+
+        // Llama a loadEntries cuando se cargue la página
+        window.onload = loadEntries;
+    </script>
+</body>
+</html>
+
