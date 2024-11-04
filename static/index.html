@@ -84,7 +84,7 @@
                 askNextQuestion();   // Preguntar la siguiente
             } else if (isNoResponse(userInput)) {
                 chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
-                handleNoResponse();  // Responder con la sugerencia de carrera y reiniciar
+                handleNoResponse();  // Responder con "no tenemos carrera" y reiniciar
             } else {
                 chatbox.innerHTML += `<p><strong>Chatbot:</strong> Por favor, responde con "sí" o "no".</p>`;
             }
@@ -107,12 +107,7 @@
         // Función para manejar respuestas "no" y reiniciar el proceso
         function handleNoResponse() {
             const chatbox = document.getElementById("chatbox");
-            const entry = entries[currentEntryIndex];
-            // Mostrar la primera sugerencia de no_responses
-            if (entry.no_responses.length > 0) {
-                chatbox.innerHTML += `<p><strong>Chatbot:</strong> ${entry.no_responses[0]}</p>`;
-            }
-            chatbox.innerHTML += `<p><strong>Chatbot:</strong> Reiniciando el proceso...</p>`;
+            chatbox.innerHTML += `<p><strong>Chatbot:</strong> No tenemos carrera recomendada para eso. Reiniciando el proceso...</p>`;
             currentEntryIndex = 0;  // Reiniciar el índice de inteligencia
             currentPropIndex = 0;   // Reiniciar el índice de preguntas
             askNextQuestion();      // Volver a empezar
