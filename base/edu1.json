@@ -1,0 +1,91 @@
+{
+    "__v": 1,
+    "description": "Base de conocimiento de educación a distancia",
+    "entries": [
+    {
+    "name": "Inteligencia Lingüística",
+    "description": "Profesorado de Lengua y Literatura, Profesorado de Inglés",
+    "props": [
+          "Te gusta escribir poemas, cuentos o novelas",
+          "Te gusta la lectura",
+          "Te gusta escuchar a los demás",
+          "Te gusta aprender otros idiomas"
+             ]
+    },
+      {
+      "name": "Inteligencia Lógica",
+      "description": "Matemático, Contador Público o Informático",
+      "props": [
+          "Te gustan las matemáticas y el cálculo",
+          "Tienes capacidad de abstracción y razonamiento",
+          "Tienes capacidad de resolver problemas lógicos",
+          "Te gustan los juegos de estrategia",
+          "Tienes capacidad de deducción"
+        ]
+      },
+      {
+        "name": "Inteligencia Espacial",
+        "description": "Arquitectura, Diseño Industrial",
+        "props": [
+          "Puedes crear imágenes en tu mente",
+          "Puedes crear estructuras en tu mente",
+          "Eres detallista en lo que miras",
+          "Puedes acomodar cosas fácilmente",
+          "Te gusta dibujar"
+        ]
+      },
+      {
+        "name": "Inteligencia Corporal",
+        "description": "Profesor de Educación Física, Kinesiólogo",
+        "props": [
+          "Tienes coordinación corporal",
+          "Tienes equilibrio",
+          "Tienes flexibilidad",
+          "Te gustan los deportes",
+          "Te gusta bailar"
+        ]
+      },
+      {
+        "name": "Inteligencia Musical",
+        "description": "Profesorado de Música, Producción de Música",
+        "props": [
+          "Te gusta la música",
+          "Puedes diferenciar notas musicales",
+          "Tienes ritmo",
+          "Te gusta tocar algún instrumento musical"
+        ]
+      },
+      {
+        "name": "Inteligencia Interpersonal",
+        "description": "Psicología, Pedagogía, Abogacía",
+        "props": [
+          "Te gusta trabajar en equipo",
+          "Sueles entender los sentimientos de los demás",
+          "Entiendes las intenciones de los demás",
+          "Sabes interpretar el lenguaje corporal",
+          "Te gusta conocer gente nueva"
+        ]
+      },
+      {
+        "name": "Inteligencia Intrapersonal",
+        "description": "Filosofía, Sociología",
+        "props": [
+          "Te gusta trabajar solo",
+          "Tienes mucha autoestima",
+          "Sueles pensar en tus metas",
+          "Conoces tus fortalezas y debilidades"
+        ]
+      },
+      {
+        "name": "Inteligencia Naturalista",
+        "description": "Profesorado de Biología, Turismo",
+        "props": [
+          "Te gusta viajar",
+          "Te gusta la fauna y flora",
+          "Te gusta cuidar plantas o animales",
+          "Te preocupa el medio ambiente"
+        ]
+      }
+    ]
+  }
+  

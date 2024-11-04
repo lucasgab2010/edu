@@ -4,17 +4,17 @@
     "entries": [
     {
     "name": "Inteligencia Lingüística",
-    "description": "Profesorado de Lengua y Literatura, Profesorado de Inglés",
+    "description": "Profesorado en Inglés, Licenciatura en Periodismo, Licenciatura en Publicidad, Licenciatura en Relaciones Internacionales, Licenciatura en Relaciones Públicas e Institucionales, Licenciatura en Sociología, Licenciatura en Ciencia Política y Gobierno, Licenciatura en Medios Audiovisuales, Abogacía",
     "props": [
           "Te gusta escribir poemas, cuentos o novelas",
           "Te gusta la lectura",
           "Te gusta escuchar a los demás",
           "Te gusta aprender otros idiomas"
-        ]
-      },
+             ]      
+    },
       {
       "name": "Inteligencia Lógica",
-      "description": "Matemático, Contador Público o Informático",
+      "description": "Licenciatura en Economía, Licenciatura en Ciencias de Datos, Licenciatura en Matemática, Licenciatura en Logística Global, Ingeniería Industrial. Ingeniería Electromecánica, Licenciatura en Actuario, Licenciatura en Inteligencia Artificial y Robótica, Licenciatura en Contabilidad y Auditoría",
       "props": [
           "Te gustan las matemáticas y el cálculo",
           "Tienes capacidad de abstracción y razonamiento",
@@ -25,7 +25,7 @@
       },
       {
         "name": "Inteligencia Espacial",
-        "description": "Arquitectura, Diseño Industrial",
+        "description": "Licenciatura en Medios Audiovisuales, Licenciatura en Publicidad, Licenciatura en Diseño y Animación Digital",
         "props": [
           "Puedes crear imágenes en tu mente",
           "Puedes crear estructuras en tu mente",
@@ -36,7 +36,7 @@
       },
       {
         "name": "Inteligencia Corporal",
-        "description": "Profesor de Educación Física, Kinesiólogo",
+        "description": "Licenciatura en Educación Física",
         "props": [
           "Tienes coordinación corporal",
           "Tienes equilibrio",
@@ -47,7 +47,7 @@
       },
       {
         "name": "Inteligencia Musical",
-        "description": "Profesorado de Música, Producción de Música",
+        "description": "Profesorado de Música con Orientación en Guitarra",
         "props": [
           "Te gusta la música",
           "Puedes diferenciar notas musicales",
@@ -57,7 +57,7 @@
       },
       {
         "name": "Inteligencia Interpersonal",
-        "description": "Psicología, Pedagogía, Abogacía",
+        "description": "Licenciatura en Recursos Humanos, Licenciatura en Gestión de Recursos Humanos, Licenciatura en Gerontología, Licenciatura en Educación, Licenciatura en Relaciones Públicas e Institucionales, Licenciatura en Criminología y Seguridad, Licenciatura en Seguridad Pública",
         "props": [
           "Te gusta trabajar en equipo",
           "Sueles entender los sentimientos de los demás",
@@ -68,7 +68,7 @@
       },
       {
         "name": "Inteligencia Intrapersonal",
-        "description": "Filosofía, Sociología",
+        "description": "Licenciatura en Psicología, Licenciatura en Antropología Organizacional, Licenciatura en Gerontología",
         "props": [
           "Te gusta trabajar solo",
           "Tienes mucha autoestima",
@@ -78,7 +78,7 @@
       },
       {
         "name": "Inteligencia Naturalista",
-        "description": "Profesorado de Biología, Turismo",
+        "description": "Profesorado de Biología, Licenciatura en Gestión Ambiental, Licenciatutra en Turismo",
         "props": [
           "Te gusta viajar",
           "Te gusta la fauna y flora",
