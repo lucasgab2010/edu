@@ -20,9 +20,9 @@
     </div>
     
     <script>
-        let currentEntryIndex = 0;    // Índice de la inteligencia actual
-        let currentPropIndex = 0;     // Índice de la pregunta actual en 'props'
-        let entries = [];             // Arreglo para almacenar todas las inteligencias
+        let currentEntryIndex = 0;
+        let currentPropIndex = 0;
+        let entries = [];
 
         async function loadEntries() {
             const chatbox = document.getElementById("chatbox");
@@ -33,7 +33,7 @@
                 if (data.entries) {
                     entries = data.entries;
                     chatbox.innerHTML += `<p>Bienvenido al chatbot Sistema Experto. ¡Comencemos!</p>`;
-                    askNextQuestion();  // Iniciar con la primera pregunta
+                    askNextQuestion();
                 } else {
                     chatbox.innerHTML += `<p><strong>Error:</strong> Datos no encontrados.</p>`;
                 }
@@ -42,58 +42,64 @@
             }
         }
 
-        // Función para hacer la siguiente pregunta en secuencia
         function askNextQuestion() {
             const chatbox = document.getElementById("chatbox");
             const entry = entries[currentEntryIndex];
 
-            // Si hay más preguntas en 'props', hacer la siguiente
             if (currentPropIndex < entry.props.length) {
                 chatbox.innerHTML += `<p><strong>Chatbot:</strong> ${entry.props[currentPropIndex]}</p>`;
             } else {
-                concludeEntry(entry);  // Mostrar conclusión si se completan todas las preguntas
+                concludeEntry(entry);
             }
             scrollChatToBottom();
         }
 
-        // Función para mostrar la conclusión al responder "sí" a todas las preguntas
         function concludeEntry(entry) {
             const chatbox = document.getElementById("chatbox");
             chatbox.innerHTML += `<p><strong>Chatbot:</strong> Conclusión: Tienes ${entry.name}. Carreras recomendadas: ${entry.description}.</p>`;
-            currentEntryIndex++;    // Avanzar a la siguiente inteligencia
-            currentPropIndex = 0;   // Reiniciar el índice de preguntas para la siguiente inteligencia
+            currentEntryIndex++;
+            currentPropIndex = 0;
 
             if (currentEntryIndex < entries.length) {
                 chatbox.innerHTML += `<p><strong>Chatbot:</strong> Vamos a la siguiente inteligencia.</p>`;
-                askNextQuestion();  // Continuar con la siguiente inteligencia
+                askNextQuestion();
             } else {
                 chatbox.innerHTML += `<p><strong>Chatbot:</strong> Fin del proceso. Gracias por participar.</p>`;
             }
             scrollChatToBottom();
         }
 
-        // Función para manejar el envío de respuestas
         function sendMessage() {
             const userInput = document.getElementById("userInput").value.toLowerCase().trim();
             const chatbox = document.getElementById("chatbox");
-            
-            // Verificar la respuesta del usuario
+
             if (isYesResponse(userInput)) {
                 chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
-                currentPropIndex++;  // Avanzar a la siguiente pregunta
-                askNextQuestion();   // Preguntar la siguiente
+                currentPropIndex++;
+                askNextQuestion();
             } else if (isNoResponse(userInput)) {
                 chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
-                handleNoResponse();  // Responder con "no tenemos carrera" y reiniciar
+                if (currentPropIndex === 0) {
+                    // Primer "NO" en la primera pregunta de la inteligencia actual
+                    currentEntryIndex++;
+                    currentPropIndex = 0;
+                    if (currentEntryIndex < entries.length) {
+                        chatbox.innerHTML += `<p><strong>Chatbot:</strong> Pasamos a la siguiente inteligencia.</p>`;
+                        askNextQuestion();
+                    } else {
+                        chatbox.innerHTML += `<p><strong>Chatbot:</strong> Fin del proceso. Gracias por participar.</p>`;
+                    }
+                } else {
+                    handleNoResponse();
+                }
             } else {
                 chatbox.innerHTML += `<p><strong>Chatbot:</strong> Por favor, responde con "sí" o "no".</p>`;
             }
-            
-            document.getElementById("userInput").value = ""; // Limpiar el campo de entrada
+
+            document.getElementById("userInput").value = "";
             scrollChatToBottom();
         }
 
-        // Funciones para verificar respuestas "sí" y "no"
         function isYesResponse(input) {
             const yesResponses = ["sí", "si", "s", "yes", "y", "affirmative"];
             return yesResponses.includes(input);
@@ -104,17 +110,15 @@
             return noResponses.includes(input);
         }
 
-        // Función para manejar respuestas "no" y reiniciar el proceso
         function handleNoResponse() {
             const chatbox = document.getElementById("chatbox");
             chatbox.innerHTML += `<p><strong>Chatbot:</strong> No tenemos carrera recomendada para eso. Reiniciando el proceso...</p>`;
-            currentEntryIndex = 0;  // Reiniciar el índice de inteligencia
-            currentPropIndex = 0;   // Reiniciar el índice de preguntas
-            askNextQuestion();      // Volver a empezar
+            currentEntryIndex = 0;
+            currentPropIndex = 0;
+            askNextQuestion();
             scrollChatToBottom();
         }
 
-        // Función para hacer scroll al final del chat automáticamente
         function scrollChatToBottom() {
             const chatbox = document.getElementById("chatbox");
             chatbox.scrollTop = chatbox.scrollHeight;
