@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import json
 from fastapi import FastAPI, HTTPException
@@ -91,3 +92,20 @@ async def chat(user_responses: dict):
     except Exception as e:
         print("Error en la conversación:", str(e))
         raise HTTPException(status_code=500, detail="Error en el procesamiento de la conversación.")
+=======
+"""
+Sistema experto
+"""
+import interfaz.menu as menu
+from acciones import engine
+
+
+def main():
+    engine.base.from_json("edu.json")  # Por defecto
+    app = menu.Interfaz()
+    app.mainloop()
+
+
+if __name__ == '__main__':
+    main()
+>>>>>>> 700115f (index html commit)
