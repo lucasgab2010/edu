@@ -1,127 +1,90 @@
 {
-    "__v": 1,
-    "description": "Base de conocimiento de educación a distancia",
-    "entries": [
+  "__v": 1,
+  "description": "Base de conocimiento de educación a distancia",
+  "entries": [
     {
-    "name": "Inteligencia Lingüística",
-<<<<<<< HEAD
-    "description": "Profesorado en Inglés, Licenciatura en Periodismo, Licenciatura en Publicidad, Licenciatura en Relaciones Internacionales, Licenciatura en Relaciones Públicas e Institucionales, Licenciatura en Sociología, Licenciatura en Ciencia Política y Gobierno, Licenciatura en Medios Audiovisuales, Abogacía",
-=======
-    "description": "Profesorado de Lengua y Literatura, Profesorado de Inglés",
->>>>>>> 700115f (index html commit)
-    "props": [
-          "Te gusta escribir poemas, cuentos o novelas",
-          "Te gusta la lectura",
-          "Te gusta escuchar a los demás",
-          "Te gusta aprender otros idiomas"
-<<<<<<< HEAD
-             ]      
+      "name": "Inteligencia Lingüística",
+      "description": "Profesorado de Lengua y Literatura, Profesorado de Inglés",
+      "props": [
+        "Te gusta escribir poemas, cuentos o novelas",
+        "Te gusta la lectura",
+        "Te gusta escuchar a los demás",
+        "Te gusta aprender otros idiomas"
+      ]
     },
-      {
-      "name": "Inteligencia Lógica",
-      "description": "Licenciatura en Economía, Licenciatura en Ciencias de Datos, Licenciatura en Matemática, Licenciatura en Logística Global, Ingeniería Industrial. Ingeniería Electromecánica, Licenciatura en Actuario, Licenciatura en Inteligencia Artificial y Robótica, Licenciatura en Contabilidad y Auditoría",
-=======
-        ]
-      },
-      {
+    {
       "name": "Inteligencia Lógica",
       "description": "Matemático, Contador Público o Informático",
->>>>>>> 700115f (index html commit)
       "props": [
-          "Te gustan las matemáticas y el cálculo",
-          "Tienes capacidad de abstracción y razonamiento",
-          "Tienes capacidad de resolver problemas lógicos",
-          "Te gustan los juegos de estrategia",
-          "Tienes capacidad de deducción"
-        ]
-      },
-      {
-        "name": "Inteligencia Espacial",
-<<<<<<< HEAD
-        "description": "Licenciatura en Medios Audiovisuales, Licenciatura en Publicidad, Licenciatura en Diseño y Animación Digital",
-=======
-        "description": "Arquitectura, Diseño Industrial",
->>>>>>> 700115f (index html commit)
-        "props": [
-          "Puedes crear imágenes en tu mente",
-          "Puedes crear estructuras en tu mente",
-          "Eres detallista en lo que miras",
-          "Puedes acomodar cosas fácilmente",
-          "Te gusta dibujar"
-        ]
-      },
-      {
-        "name": "Inteligencia Corporal",
-<<<<<<< HEAD
-        "description": "Licenciatura en Educación Física",
-=======
-        "description": "Profesor de Educación Física, Kinesiólogo",
->>>>>>> 700115f (index html commit)
-        "props": [
-          "Tienes coordinación corporal",
-          "Tienes equilibrio",
-          "Tienes flexibilidad",
-          "Te gustan los deportes",
-          "Te gusta bailar"
-        ]
-      },
-      {
-        "name": "Inteligencia Musical",
-<<<<<<< HEAD
-        "description": "Profesorado de Música con Orientación en Guitarra",
-=======
-        "description": "Profesorado de Música, Producción de Música",
->>>>>>> 700115f (index html commit)
-        "props": [
-          "Te gusta la música",
-          "Puedes diferenciar notas musicales",
-          "Tienes ritmo",
-          "Te gusta tocar algún instrumento musical"
-        ]
-      },
-      {
-        "name": "Inteligencia Interpersonal",
-<<<<<<< HEAD
-        "description": "Licenciatura en Recursos Humanos, Licenciatura en Gestión de Recursos Humanos, Licenciatura en Gerontología, Licenciatura en Educación, Licenciatura en Relaciones Públicas e Institucionales, Licenciatura en Criminología y Seguridad, Licenciatura en Seguridad Pública",
-=======
-        "description": "Psicología, Pedagogía, Abogacía",
->>>>>>> 700115f (index html commit)
-        "props": [
-          "Te gusta trabajar en equipo",
-          "Sueles entender los sentimientos de los demás",
-          "Entiendes las intenciones de los demás",
-          "Sabes interpretar el lenguaje corporal",
-          "Te gusta conocer gente nueva"
-        ]
-      },
-      {
-        "name": "Inteligencia Intrapersonal",
-<<<<<<< HEAD
-        "description": "Licenciatura en Psicología, Licenciatura en Antropología Organizacional, Licenciatura en Gerontología",
-=======
-        "description": "Filosofía, Sociología",
->>>>>>> 700115f (index html commit)
-        "props": [
-          "Te gusta trabajar solo",
-          "Tienes mucha autoestima",
-          "Sueles pensar en tus metas",
-          "Conoces tus fortalezas y debilidades"
-        ]
-      },
-      {
-        "name": "Inteligencia Naturalista",
-<<<<<<< HEAD
-        "description": "Profesorado de Biología, Licenciatura en Gestión Ambiental, Licenciatutra en Turismo",
-=======
-        "description": "Profesorado de Biología, Turismo",
->>>>>>> 700115f (index html commit)
-        "props": [
-          "Te gusta viajar",
-          "Te gusta la fauna y flora",
-          "Te gusta cuidar plantas o animales",
-          "Te preocupa el medio ambiente"
-        ]
-      }
-    ]
-  }
-  
+        "Te gustan las matemáticas y el cálculo",
+        "Tienes capacidad de abstracción y razonamiento",
+        "Tienes capacidad de resolver problemas lógicos",
+        "Te gustan los juegos de estrategia",
+        "Tienes capacidad de deducción"
+      ]
+    },
+    {
+      "name": "Inteligencia Espacial",
+      "description": "Arquitectura, Diseño Industrial",
+      "props": [
+        "Puedes crear imágenes en tu mente",
+        "Puedes crear estructuras en tu mente",
+        "Eres detallista en lo que miras",
+        "Puedes acomodar cosas fácilmente",
+        "Te gusta dibujar"
+      ]
+    },
+    {
+      "name": "Inteligencia Corporal",
+      "description": "Profesor de Educación Física, Kinesiólogo",
+      "props": [
+        "Tienes coordinación corporal",
+        "Tienes equilibrio",
+        "Tienes flexibilidad",
+        "Te gustan los deportes",
+        "Te gusta bailar"
+      ]
+    },
+    {
+      "name": "Inteligencia Musical",
+      "description": "Profesorado de Música, Producción de Música",
+      "props": [
+        "Te gusta la música",
+        "Puedes diferenciar notas musicales",
+        "Tienes ritmo",
+        "Te gusta tocar algún instrumento musical"
+      ]
+    },
+    {
+      "name": "Inteligencia Interpersonal",
+      "description": "Psicología, Pedagogía, Abogacía",
+      "props": [
+        "Te gusta trabajar en equipo",
+        "Sueles entender los sentimientos de los demás",
+        "Entiendes las intenciones de los demás",
+        "Sabes interpretar el lenguaje corporal",
+        "Te gusta conocer gente nueva"
+      ]
+    },
+    {
+      "name": "Inteligencia Intrapersonal",
+      "description": "Filosofía, Sociología",
+      "props": [
+        "Te gusta trabajar solo",
+        "Tienes mucha autoestima",
+        "Sueles pensar en tus metas",
+        "Conoces tus fortalezas y debilidades"
+      ]
+    },
+    {
+      "name": "Inteligencia Naturalista",
+      "description": "Profesorado de Biología, Turismo",
+      "props": [
+        "Te gusta viajar",
+        "Te gusta la fauna y flora",
+        "Te gusta cuidar plantas o animales",
+        "Te preocupa el medio ambiente"
+      ]
+    }
+  ]
+}
